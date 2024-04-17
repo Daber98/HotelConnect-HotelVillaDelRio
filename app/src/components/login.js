@@ -3,6 +3,8 @@ import axios from "axios";
 import { useNavigate } from 'react-router-dom'
 import {setToken} from './Auth.js'
 import Navbar from './navbar'
+import villaImage from "../image/Hotel.jpg";
+import "../css/Login.css"
  
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -37,7 +39,7 @@ const Login = () => {
           <div className="container-fluid h-custom">
             <div className="row d-flex justify-content-center align-items-center h-100">
               <div className="col-md-9 col-lg-6 col-xl-5">
-                <img className="img-fluid"/>
+                <img src={villaImage} className="imagen-login" />
               </div>
               <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
                 <form>
