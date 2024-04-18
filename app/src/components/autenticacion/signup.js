@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Axios from "axios";
-import villaImage from "../image/Villa.jpg";
-import Navbar from './navbar'
+import villaImage from "../../image/Villa.jpg";
+import Navbar from '../home/navbar'
 
 const SignUp = () => {
     

@@ -1,6 +1,6 @@
 import React from "react";
-import { fetchToken } from './Auth.js';
-import logo from '../image/Logo.jpg';
+import { fetchToken } from '../Auth.js';
+import logo from '../../image/Logo.jpg';
 
 const Navbar = () => {
     return (

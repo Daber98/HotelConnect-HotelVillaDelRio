@@ -1,10 +1,10 @@
 import React, {useState} from "react";
 import axios from "axios";
 import { useNavigate } from 'react-router-dom'
-import {setToken} from './Auth.js'
-import Navbar from './navbar'
-import villaImage from "../image/Hotel.jpg";
-import "../css/Login.css"
+import {setToken} from '../Auth.js'
+import Navbar from '../home/navbar.js'
+import villaImage from "../../image/Villa.jpg";
+import "../../css/Login.css"
  
 const Login = () => {
     const [email, setEmail] = useState("");

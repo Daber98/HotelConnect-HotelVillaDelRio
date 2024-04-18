@@ -1,9 +1,9 @@
 import React, { useLayoutEffect, useRef } from "react"; // Asegúrate de importar React sin llaves
 import { Card, CardContent, Typography } from '@mui/material';
 import { Map, Marker, NavigationControl } from 'mapbox-gl';
-import Navbar from './navbar'
+import Navbar from '../home/navbar'
 
-import '../css/Informacion.css';
+import '../../css/Informacion.css';
 
 const Informacion = () => {
     const mapDiv = useRef(null);

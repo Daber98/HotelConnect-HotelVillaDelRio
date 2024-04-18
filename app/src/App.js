@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./components/login";
-import SignUp from "./components/signup";
+import Login from "./components/autenticacion/login.js";
+import SignUp from "./components/autenticacion/signup.js";
 import Profile from "./components/profile";
-import Habitacion from "./components/habitacion.js";
-import Informacion from "./components/Informacion.js";
-import Inicio from "./components/Inicio.js";
+import Habitacion from "./components/home/habitacion.js";
+import Informacion from "./components/home/Informacion.js";
+import Inicio from "./components/home/Inicio.js";
+import Logout from "./components/home/signup.js";
 import {RequireToken} from './components/Auth.js'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
               <Route path="/habitacion" element={<Habitacion />} />
               <Route path="/informacion" element={<Informacion />} />
               <Route path="/inicio" element={<Inicio />} />
+              <Route path="/logout" element={<Logout />} />
               <Route path="/profile"
                 element={
                   <RequireToken>

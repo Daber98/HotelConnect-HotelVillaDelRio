@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Typography, Button } from '@mui/material';
-import Navbar from './navbar'
+import Navbar from '../home/navbar'
 
-import "../css/inicio.css"
+import "../../css/inicio.css"
 
 const Inicio = () => {
     return (
