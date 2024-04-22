@@ -6,6 +6,8 @@ import Habitacion from "./components/home/habitacion.js";
 import Informacion from "./components/home/Informacion.js";
 import Inicio from "./components/home/Inicio.js";
 import Logout from "./components/home/signup.js";
+import Habitaciones from "./components/habitacion/Habitaciones.js";
+import Reservaciones from "./components/habitacion/Reservaciones.js";
 import {RequireToken} from './components/Auth.js'
 
 function App() {
@@ -23,6 +25,20 @@ function App() {
                 element={
                   <RequireToken>
                     <Profile />
+                  </RequireToken>
+                }
+              />
+              <Route path="/habitaciones"
+                element={
+                  <RequireToken>
+                    <Habitaciones />
+                  </RequireToken>
+                }
+              />
+              <Route path="/reservaciones"
+                element={
+                  <RequireToken>
+                    <Reservaciones />
                   </RequireToken>
                 }
               />
