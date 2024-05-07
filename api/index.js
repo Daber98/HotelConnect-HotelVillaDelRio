@@ -14,11 +14,13 @@ require('./database/mysqlConnection'); // Modulo de conexión a MySQL
 const hashController = require('./controllers/auth/hashController');
 const loginController = require('./controllers/auth/loginController');
 const registerController = require('./controllers/auth/registerController');
+const reservationController = require('./controllers/auth/reservationController');
 
 // Routes
 app.get('/hash', hashController.hashPassword);
 app.post('/login', loginController.login);
 app.post('/register', registerController.register);
+app.post('/reservation', reservationController.reservation);
 
 const PORT = process.env.BACKEND_PORT
 app.listen(PORT, () => {

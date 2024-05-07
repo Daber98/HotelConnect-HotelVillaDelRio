@@ -5,7 +5,7 @@ import Profile from "./components/profile";
 import Habitacion from "./components/home/habitacion.js";
 import Informacion from "./components/home/Informacion.js";
 import Inicio from "./components/home/Inicio.js";
-import Logout from "./components/home/signup.js";
+import Logout from "./components/home/signuphome";
 import Habitaciones from "./components/habitacion/Habitaciones.js";
 import Reservaciones from "./components/habitacion/Reservaciones.js";
 import {RequireToken} from './components/Auth.js'

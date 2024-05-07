@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Box, Card, CardContent, CardActions, CardMedia, Typography, Button, Grid } from '@mui/material';
-import Navbar from '../NavbarDashboard'
+import Navbar from '../NavbarDashboard';
+import fondo from "../../image/fondo.jpg"; // Importa la imagen de fondo
 
 import image1 from "../../image/Hotel.jpg";
 import image2 from "../../image/Hotel.jpg";
@@ -53,8 +54,8 @@ const Habitaciones = () => {
     };
 
     return (
-        <div>
-            <Navbar/>
+        <div style={{ backgroundImage: `url(${fondo})`, backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '100vh', backgroundRepeat: 'no-repeat' }}>
+            <Navbar />
             <h1 style={{ textAlign: 'center' }}>Reserva tu habitación</h1>
             <Box display="flex" justifyContent="center">
                 <div style={{ display: 'flex', justifyContent: 'space-between', width: '80%' }}>

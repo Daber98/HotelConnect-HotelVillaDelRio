@@ -1,7 +1,8 @@
 import { useState } from "react";
 import Axios from "axios";
-import villaImage from "../../image/Villa.jpg";
-import Navbar from '../home/navbar'
+import villaImage from "../../image/Entrada.jpg";
+import Navbar from '../home/navbar';
+import fondo from "../../image/fondo.jpg"; // Importa la imagen de fondo
 
 const SignUp = () => {
     
@@ -35,7 +36,7 @@ const SignUp = () => {
     ];
 
     return (
-      <div>
+      <div style={{ backgroundImage: `url(${fondo})`, backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '100vh' }}>
         <Navbar/>
         <div className="container" style={{ paddingTop: 60 }}>
           <div className="container-fluid h-custom">
@@ -114,7 +115,6 @@ const SignUp = () => {
           </div>
         </div>
       </div>
-        
     );
 };
 

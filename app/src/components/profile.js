@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import NavbarDashboard from "./NavbarDashboard";
+import fondo from "../image/fondo.jpg"; // Importa la imagen de fondo
 
 const Profile = () => {
     const navigate = useNavigate();
@@ -11,7 +12,7 @@ const Profile = () => {
     }
 
     return (
-        <div>
+        <div style={{ backgroundImage: `url(${fondo})`, backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '100vh' }}>
             <NavbarDashboard />
             <div className="container" style={{ paddingTop: 60 }}>
                 <div className="row">

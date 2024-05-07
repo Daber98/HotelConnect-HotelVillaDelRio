@@ -3,8 +3,9 @@ import axios from "axios";
 import { useNavigate } from 'react-router-dom'
 import {setToken} from '../Auth.js'
 import Navbar from '../home/navbar.js'
-import villaImage from "../../image/Villa.jpg";
+import villaImage from "../../image/Entrada.jpg";
 import "../../css/Login.css"
+import fondo from "../../image/fondo.jpg"; // Importa la imagen de fondo
  
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -22,8 +23,8 @@ const Login = () => {
         .then(res => {
             console.log(res);
             if(res.data.Status === 'Success') {
-        console.log(res.data.Token);
-        setToken(res.data.Token)
+                console.log(res.data.Token);
+                setToken(res.data.Token)
                 navigate('/profile');
             } else {
                 setError(res.data.Error);
@@ -32,63 +33,62 @@ const Login = () => {
         .catch(err => console.log(err));
     }
     
-  return (
-    <div>
-      <Navbar/>
-      <div className="container" style={{paddingTop: 60}}>
-          <div className="container-fluid h-custom">
-            <div className="row d-flex justify-content-center align-items-center h-100">
-              <div className="col-md-9 col-lg-6 col-xl-5">
-                <img src={villaImage} className="imagen-login" />
-              </div>
-              <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-                <form>
-                  <div className="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-                    <p className="lead fw-normal mb-0 me-3">Iniciar sesion</p>
-                  </div>
-                    <h1 style={{color: 'red', fontSize: '15px', textAlign: 'center', marginTop: '20px'}}>{error && error}</h1>
-                  <div className="form-outline mb-4">
-                    <input
-                      type="email"
-                      className="form-control form-control-lg"
-                      placeholder="Introduzca una dirección de correo electrónico válida"
-                      onChange={(e) => {setEmail(e.target.value)}} required
-                    />
-                    <label className="form-label">Correo electronico</label>
-                  </div>
-                  <div className="form-outline mb-3">
-                    <input
-                      type="password"
-                      className="form-control form-control-lg"
-                      placeholder="Introduce una contraseña"
-                      onChange={(e) => {setPassword(e.target.value)}} required
-                    />
-                    <label className="form-label">Contraseña</label>
-                  </div>
-    
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div className="form-check mb-0">
-                      <input className="form-check-input me-2" type="checkbox" value=""/>
-                      <label className="form-check-label">
-                        Recordar
-                      </label>
+    return (
+        <div style={{ backgroundImage: `url(${fondo})`, backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '100vh' }}>
+            <Navbar/>
+            <div className="container" style={{paddingTop: 60}}>
+                <div className="container-fluid h-custom">
+                    <div className="row d-flex justify-content-center align-items-center h-100">
+                        <div className="col-md-9 col-lg-6 col-xl-5">
+                            <img src={villaImage} className="imagen-login" alt="Villa de la imagen de entrada" />
+                        </div>
+                        <div className="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                            <form>
+                                <div className="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                                    <p className="lead fw-normal mb-0 me-3">Iniciar sesion</p>
+                                </div>
+                                <h1 style={{color: 'red', fontSize: '15px', textAlign: 'center', marginTop: '20px'}}>{error && error}</h1>
+                                <div className="form-outline mb-4">
+                                    <input
+                                        type="email"
+                                        className="form-control form-control-lg"
+                                        placeholder="Introduzca una dirección de correo electrónico válida"
+                                        onChange={(e) => {setEmail(e.target.value)}} required
+                                    />
+                                    <label className="form-label">Correo electronico</label>
+                                </div>
+                                <div className="form-outline mb-3">
+                                    <input
+                                        type="password"
+                                        className="form-control form-control-lg"
+                                        placeholder="Introduce una contraseña"
+                                        onChange={(e) => {setPassword(e.target.value)}} required
+                                    />
+                                    <label className="form-label">Contraseña</label>
+                                </div>
+                
+                                <div className="d-flex justify-content-between align-items-center">
+                                    <div className="form-check mb-0">
+                                        <input className="form-check-input me-2" type="checkbox" value=""/>
+                                        <label className="form-check-label">
+                                            Recordar
+                                        </label>
+                                    </div>
+                                    <a href="#" className="text-body">¿Has olvidado tu contraseña?</a>
+                                </div>
+                
+                                <div className="text-center text-lg-start mt-4 pt-2">
+                                    <button type="button" className="btn btn-primary btn-lg" onClick={login}>Ingresar</button>
+                                    <p className="small fw-bold mt-2 pt-1 mb-0">Crear cuenta <a href="signup" className="link-danger">Registrarse</a></p>
+                                </div>
+                
+                            </form>
+                        </div>
                     </div>
-                    <a href="#" className="text-body">¿Has olvidado tu contraseña?</a>
-                  </div>
-    
-                  <div className="text-center text-lg-start mt-4 pt-2">
-                    <button type="button" className="btn btn-primary btn-lg" onClick={login}>Ingresar</button>
-                    <p className="small fw-bold mt-2 pt-1 mb-0">Crear cuenta <a href="signup" className="link-danger">Registrarse</a></p>
-                  </div>
-    
-                </form>
-              </div>
+                </div>
             </div>
-          </div>
         </div>
-    </div>
-        
-  );
+    );
 };
    
 export default Login;

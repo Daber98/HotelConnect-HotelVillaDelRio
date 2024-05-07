@@ -1,4 +1,7 @@
-.imagen-login{
-    width: 300px;
-    height: 300px;
+/* Login.css */
+
+.imagen-login {
+    width: 100%; /* Cambia el valor según lo necesites */
+    height: auto; /* Esto mantiene la proporción original de la imagen */
+    max-width: none; /* Permite que la imagen sea más grande que su tamaño original */
 }

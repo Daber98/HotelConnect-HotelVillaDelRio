@@ -4,7 +4,7 @@ import logo from '../image/Logo.jpg';
 
 const NavbarDashboard = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
             <div className="container">
                 <a className="navbar-brand" href="./profile">
                     <img src={logo} alt="Hotel Villa del Rio" style={{ height: '30px', marginRight: '10px' }} />
@@ -23,8 +23,7 @@ const NavbarDashboard = () => {
                         </li>
                     </ul>
                     <div className="d-flex">
-                                    <a className="btn btn-outline-primary" href="/SignUp">Cerrar Sesion</a>
-                        
+                        <a className="btn btn-outline-light" href="/Logout">Cerrar Sesion</a>
                     </div>
                 </div>
             </div>

@@ -1,7 +1,9 @@
-import React, { useLayoutEffect, useRef } from "react"; // Asegúrate de importar React sin llaves
+import React, { useLayoutEffect, useRef } from "react";
 import { Card, CardContent, Typography } from '@mui/material';
 import { Map, Marker, NavigationControl } from 'mapbox-gl';
-import Navbar from '../home/navbar'
+import Navbar from '../home/navbar';
+
+import fondo from "../../image/fondo.jpg"; // Importa la imagen de fondo
 
 import '../../css/Informacion.css';
 
@@ -49,9 +51,9 @@ const Informacion = () => {
     }, []);
 
     return (
-        <div>
+        <div style={{ backgroundImage: `url(${fondo})`, backgroundSize: 'cover', backgroundPosition: 'center', minHeight: '100vh' }}>
             <Navbar/>
-            <h1 style={{ textAlign: 'center' }}>Informacion</h1>
+            <h1 style={{ textAlign: 'center', paddingTop: '20px' }}>Informacion</h1>
             <div style={{ display: 'flex', justifyContent: 'center' }}>
                 <div style={{ width: '50%' }}>
                     <Card>

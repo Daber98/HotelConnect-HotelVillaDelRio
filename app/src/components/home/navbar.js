@@ -4,7 +4,7 @@ import logo from '../../image/Logo.jpg';
 
 const Navbar = () => {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
             <div className="container">
                 <a className="navbar-brand" href="/inicio">
                     <img src={logo} alt="Hotel Villa del Rio" style={{ height: '30px', marginRight: '10px' }} />
@@ -25,9 +25,8 @@ const Navbar = () => {
                             <a className="nav-link" href="/Informacion">Informacion</a>
                         </li>
                     </ul>
-                    <div className="d-flex">
-                                    <a className="btn btn-outline-primary" href="/SignUp">Registrarse</a>
-                        
+                    <div className="d-flex" style={{ marginTop: '10px' }}> {/* Agregando margen superior */}
+                        <a className="btn btn-outline-light" href="/SignUp">Registrarse</a>
                     </div>
                 </div>
             </div>
